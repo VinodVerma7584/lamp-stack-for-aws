@@ -5,7 +5,7 @@ terragrunt = {
     config {
       bucket = "terraform-state-xyz"
       key = "${path_relative_to_include()}/terraform.tfstate"
-      region = "us-west-2"
+      region = "us-east-1"
       encrypt = true
       #dynamodb_table = "my-lock-table"
     }
@@ -24,7 +24,7 @@ terragrunt = {
 
       arguments = [
         "-var",
-        "region=us-west-2",
+        "region=us-east-1",
         "-var",
         "environment=prod",
         "-var",
